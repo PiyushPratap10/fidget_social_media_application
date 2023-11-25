@@ -25,6 +25,6 @@ void main() async {
         colorScheme: lightScheme,
         scaffoldBackgroundColor: lightScheme.background),
     debugShowCheckedModeBanner: false,
-    home: const FeedScreen(),
+    home: const StartScreen(),
   ));
 }

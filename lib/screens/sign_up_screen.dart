@@ -24,7 +24,7 @@ class _SignupScreenState extends State<SignupScreen> {
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  Uint8List? _image;
+  Uint8List _image = Uint8List(0);
 
   void selectImage() async {
     Uint8List image = await pickImage(ImageSource.gallery);
@@ -113,7 +113,12 @@ class _SignupScreenState extends State<SignupScreen> {
             const SizedBox(
               height: 12,
             ),
-            const FinishButton(),
+            FinishButton(
+              email: _emailController.text,
+              password: _passwordController.text,
+              userName: _usernameController.text,
+              file: _image!,
+            ),
             Flexible(flex: 2, child: Container()),
             Row(
               mainAxisSize: MainAxisSize.min,

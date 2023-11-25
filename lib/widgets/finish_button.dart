@@ -1,13 +1,21 @@
+import 'dart:typed_data';
+
+import 'package:fidget_application/resources/authentication.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
 
 class FinishButton extends StatelessWidget {
-  const FinishButton({super.key});
+  const FinishButton({super.key,required this.email, required this.password,required this.userName,required this.file});
+  final String email;
+  final String password;
+  final String userName;
+  final Uint8List file;
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap:() => Authentication().signUp(
+          email: email, userName: userName, password: password, file: file),
       child: Container(
         alignment: Alignment.center,
         width: 250,
