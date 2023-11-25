@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:fidget_application/screens/login_screen.dart';
 import 'package:fidget_application/utils/util_function.dart';
 import 'package:fidget_application/widgets/finish_button.dart';
-import 'package:fidget_application/widgets/sign_in_button.dart';
+// import 'package:fidget_application/widgets/sign_in_button.dart';
 // import 'package:fidget_application/widgets/sign_up_button.dart';
 import 'package:fidget_application/widgets/text_input_widget.dart';
 import 'package:flutter/material.dart';
